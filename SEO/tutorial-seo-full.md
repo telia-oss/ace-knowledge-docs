@@ -110,13 +110,13 @@ The final task is to activate the default javascript widget script. Simply inclu
       f = b.createElement(e), f.async = !0, f.src = c, g = b.getElementsByTagName(e)[0], g.parentNode.insertBefore(f, g), a[d] = a[d] || { _c: [], configure: function () { a[d]._c.push(arguments) } }; var j = d.toLowerCase(); a[j] = a[j] || { _c: [], configure: function () { a[j]._c.push(arguments) } }
     })(window, document, "//{your-application-name-in-ace-knowledge}.humany.net/default/embed.js", "Humany", "script");
 
-    // push-state config:
-    window.humany.configure((config) => { config({ type: '@humany/inline-widget' }).routing({ mode: 'browser', basePath: '{base-path-goes-here}' }) });
+    // push-state config
+    window.humany.configure((config) => { config('{widget-name-goes-here}').routing({ basePath: '{base-path-goes-here}', mode: 'browser' }) });
 	</script>
 		
 The Humany embed script will now identify the pre-compiled html and replace it with the default javascript widget, working and looking the same way as you are used to. Regular users will probably not see any difference, but we have now enabled the widget to be indexed by Google and other search engines.
 
-In addition, since the different views in the widget is now represented by a real physical page, we can take advantage of `pushState`, which is available in all modern browsers. This gives the advantage of friendly urls during widget operations which also conform to a SEO page. This is done by the second part of the script above. **Note** that you will need to set `basePath` in the script!
+In addition, since the different views in the widget is now represented by a real physical page, we can take advantage of `pushState`, which is available in all modern browsers. This gives the advantage of friendly urls during widget operations which also conform to a SEO page. This is done by the second part of the script above. **Note** that you will need to set `basePath` in the script and specify the widget name!
 
 ## Meta data
 To be able to render a proper title and description for each page, the SEO Service provides a response header for `HumanyPageTitle`. Use it to construct the head part of your page.
