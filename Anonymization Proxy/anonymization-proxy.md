@@ -13,7 +13,7 @@ Anonymization Proxy offers the following features:
 Before using Anonymization Proxy, please note the following:
   * Anonymization Proxy currently only works with public Widgets.
   * Anonymization Proxy does not allow searching on PII in Widgets.
-  * Anonymization Proxy cannot be used for v1-v3 Widget implementations.
+  * Anonymization Proxy works with v4 Widgets and higher. Widget v1-v3 implementations are not supported.
   * Widgets distributed through Web provisions cannot be configured to use Anonymization Proxy.
 
 ### Enabling Anonymization Proxy
@@ -30,7 +30,7 @@ Then open the Portal Widget by clicking `Preview` and choosing `Yes` to `Preview
 
 ![](images/preview.png)
 
-### Widgets Embedded on Your website
+### Widgets Embedded on Your Website
 
 To embed Widget on your website and configure it to use Anonymization Proxy, follow the general Widget installation instructions in `Embed on your website` section of Widget Editor. One small modification is needed for the installation script.
 
