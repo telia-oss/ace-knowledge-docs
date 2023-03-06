@@ -1,39 +1,40 @@
-## Overview
+## Anonymization Proxy
 
-Anonymization Proxy detects and anonymizes Personally Identifiable Information (PII) that originates from the use of ACE Knowledge Widgets (e.g., performing a search, chatting with an ACE Knowledge Chat Bot, etc.).
+Anonymization Proxy is a tool that detects and anonymizes Personally Identifiable Information (PII) originating from the use of ACE Knowledge Widgets. This tool is designed to help protect user privacy when interacting with ACE Knowledge Widgets. Any detected PII is processed within Telia cloud and never reaches foreign entities such as Microsoft Azure, where ACE Knowledge backend is hosted.
 
 ## Features
 
-* Anonymization of PII such as personal names, social security numbers, telephone numbers.
-* Client IP masking - IP address of the user that works with ACE Knowledge Widgets is automatically masked as it is only visible to Anonymization Proxy application. Anonymization Proxy does not store this information and does not forward it to ACE Knowledge backend.
+Anonymization Proxy offers the following features:
+  * Anonymization of PII such as personal names, social security numbers, and telephone numbers.
+  * Client IP masking - IP addresses are automatically masked as they are only visible to Anonymization Proxy application. Anonymization Proxy does not store this information and does not forward it to ACE Knowledge backend.
 
-## How can I use Anonymization Proxy?
+## Using Anonymization Proxy
 
-In order to be able to use Anonymization Proxy, please consider the following:
-  * Anonymization Proxy currently only works with public Widgets
-  * Since anonymization of PII is done outside of ACE Knowledge backend, it means that it is no longer possible to search on PII in Widgets when using Anonymization Proxy
-  * It is not possible to use Anonymization Proxy for v1-v3 Widget implementations
-  * Widgets distributed through Web provisions cannot be configured to use Anonymization Proxy
+Before using Anonymization Proxy, please note the following:
+  * Anonymization Proxy currently only works with public Widgets.
+  * Anonymization Proxy does not allow searching on PII in Widgets.
+  * Anonymization Proxy cannot be used for v1-v3 Widget implementations.
+  * Widgets distributed through Web provisions cannot be configured to use Anonymization Proxy.
 
 ### Enabling Anonymization Proxy
 
-Please contact ACE Knowledge support team if you wish to start using Anonymization Proxy. Team will enable the feature for your specified tenant(s).
+Please contact ACE Knowledge support team to start using Anonymization Proxy. They will enable the feature for your specified tenant(s).
 
 #### Portals
 
-Portal type of Widgets hosted on ACE Knowledge do not require additional configuration as long as they are **publicly accessible**. Please make sure accces mode is set to `Public access` in Widget's Security Settings:
+For Portal type of Widgets hosted on ACE Knowledge that are publicly accessible, no additional configuration is needed. Simply ensure that the access mode is set to `Public access` in Widget's Security Settings:
 
 ![](images/security-settings.png)
 
-Then, you can simply open Portal Widget by clicking `Preview` on the Widget and choosing `Yes` to `Preview using Anonymization Proxy` option as per below image:
+Then open the Portal Widget by clicking `Preview` and choosing `Yes` to `Preview using Anonymization Proxy` option:
 
 ![](images/preview.png)
 
-### Widgets embedded on your website
+### Widgets Embedded on Your website
 
-In order to embed Widget on your web site and configure it use Anonymization Proxy, please follow the general Widget installation instructions in `Embed on your website` section of Widget Editor. However, one small modification is needed for installation script.
+To embed Widget on your website and configure it to use Anonymization Proxy, follow the general Widget installation instructions in `Embed on your website` section of Widget Editor. One small modification is needed for the installation script.
 
-1. Click on `Show installation code` as per below image:
+1. Click on `Show installation code`:
 
 ![](images/embed.png)
 
@@ -46,3 +47,5 @@ In order to embed Widget on your web site and configure it use Anonymization Pro
 For example, if the link is `//tenant.humany.net/v5/embed.js`, after the change it should become `//tenant.anon-proxy.ace.teliacompany.net/v5/embed.js`.
   
 4. Follow the rest of the steps as they are defined in `Embed on your website` section.
+
+For more information about Anonymization Proxy, contact the ACE Knowledge support team.
