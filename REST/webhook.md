@@ -126,7 +126,7 @@ function verifySignature(request, secretKey) {
 
 When implementing JWT signature verification:
 
-- **Store the secret key securely** - Never expose it in client-side code or logs
+- **Store the secret key securely** - Never expose it in client-side code or logs. The secret key should be at least 32 characters long for adequate security.
 - **Use HTTPS only** - All webhook communications should use encrypted connections (new web service contact methods will enforce HTTPS)
 - **Implement rate limiting** - Protect your endpoint from excessive requests
 - **Log security events** - Monitor for signature verification failures
