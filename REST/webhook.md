@@ -71,7 +71,12 @@ Humany allows the editor to specify custom HTTP headers that will be included in
 
 ## HTTP request signing
 
-Humany supports HTTP request signing using JWT tokens. This optional feature can be enabled by the editor when creating or editing a contact method of type Web Service by checking `Use request signing` and providing a secret key under `Receiving web service` section. If enabled, Humany will sign the HTTP request using a JWT token and include this token in the header `X-ACE-Signature` of the request. The token is signed using the HMAC SHA256 algorithm and a secret key specified by the editor. Token includes the following claims:
+Humany supports HTTP request signing using JWT tokens. This optional feature can be enabled by the editor when creating or editing a contact method of type Web Service by checking `Use request signing` and providing a secret key under `Receiving web service` section.
+
+![alt text](/screenshots/contact-method-service.png)
+
+
+ If enabled, Humany will sign the HTTP request using a JWT token and include this token in the header `X-ACE-Signature` of the request. The token is signed using the HMAC SHA256 algorithm and a secret key specified by the editor. Token includes the following claims:
  
  * `iss`: The issuer of the token, set to "ace-knowledge".
  * `aud`: The audience of the token, set to receiving endpoint url.
