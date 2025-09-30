@@ -2,7 +2,7 @@
 
 # Contact Method WebHook
 
-This described how to use the Web Service contact method to pass information from a form to a system external to Humany and display information from this service to users using Humany widgets. Developers are the intended audience of this documentation.
+These instructions describe how to use the Web Service contact method to pass information from a form to a system external to Humany and display information from this service to users using Humany widgets. Developers are the intended audience of this documentation.
 
 ## Background
 
@@ -23,7 +23,7 @@ When executing a contact method of type Web service, Humany will act as a middle
 
 ## Receiving Content-Type
 
-Humany will transfer the current state and context of the end user request to the external web service in the formats listed below. The context includes any possible form fields filled-out by the end user prior to sending the contact method form, aswell as Humanys current list of parameters associated with the current user request.
+Humany will transfer the current state and context of the end user request to the external web service in the formats listed below. The context includes any possible form fields filled-out by the end user prior to sending the contact method form, as well as Humanys current list of parameters associated with the current user request.
 
 ### Example application/json
 
